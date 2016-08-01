@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo1</title>
+	<script src="//cdn.bootcss.com/react/15.2.1/react.js"></script>
+	<script src="//cdn.bootcss.com/react/15.2.1/react-dom.js"></script>
+	<script src="browser.min.js"></script>
+</head>
+<body>
+	<div id="target_can"></div>
+	<script type="text/babel">
+		var BaseComponent = React.createClass({
+			render:function(){
+				return(<SonComponent text="hello world"/>)
+			}
+		});
+		var SonComponent = React.createClass({
+			render:function(){
+				return(<div>{this.props.text}</div>)
+			}
+		});
+		ReactDOM.render(<BaseComponent />,document.getElementById('target_can'));
+	</script>
+</body>
+</html>
